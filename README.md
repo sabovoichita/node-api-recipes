@@ -5,7 +5,6 @@ Node JS CRUD API Example
 - [x] store info in [JSON file](data/recipes.json)
 - [x] store info in DB [MySQL](https://www.mysql.com/)
 - [ ] store info in file similar to mongo format (check https://github.com/sergeyksv/tingodb)
-- [x] UI Example for this app can be found in [nmatei/recipes-book](https://github.com/nmatei/recipes-book)
 
 ## Table of Contents
 
@@ -22,8 +21,8 @@ Node JS CRUD API Example
 ## ⚙ Install
 
 ```sh
-git clone https://github.com/nmatei/node-api.git
-cd node-api
+git clone https://github.com/sabovoichita/node-api-recipes2.git
+cd node-api-recipes2
 npm install
 ```
 
@@ -57,10 +56,11 @@ fetch("http://localhost:3000/recipes-json/create", {
     "Content-Type": "application/json"
   },
   body: JSON.stringify({
-    promotion: "WON3",
-    members: "Your Name",
-    name: "CV",
-    url: "https://github.com/nmatei/recipes-book"
+    title: "Shortcake biscuits",
+    image: "images/1.jpg",
+    ingredients:
+      "250 gr flour, 100gr icing sugar, 200gr butter, 1 egg (2 tbsp), 2 tbsp vanilla essence, Nuts for decorating",
+    link: "#"
   })
 });
 
@@ -70,7 +70,7 @@ fetch("http://localhost:3000/recipes-json/delete", {
   headers: {
     "Content-Type": "application/json"
   },
-  body: JSON.stringify({ id: "fedcba1610309909431" })
+  body: JSON.stringify({ id: "toze8j1610313009673" })
 });
 
 // PUT recipes-json/update
@@ -80,18 +80,19 @@ fetch("http://localhost:3000/recipes-json/update", {
     "Content-Type": "application/json"
   },
   body: JSON.stringify({
-    id: "fedcba1610310163146",
-    promotion: "WON3",
-    members: "UpdatedName",
-    name: "Name",
-    url: "https://github.com/nmatei/recipes-book"
+    id: "toze8j1610313009673",
+    title: "Shortcake biscuits",
+    image: "images/1.jpg",
+    ingredients:
+      "250 gr flour, 100gr icing sugar, 200gr butter, 1 egg (2 tbsp), 2 tbsp vanilla essence, Nuts for decorating",
+    link: "#"
   })
 });
 ```
 
 ## DB (MySQL) as storage
 
-Team members are stored in [MySQL](https://www.mysql.com/)
+Recipes are stored in [MySQL](https://www.mysql.com/)
 
 - configure user & pass for mysql connection [routes/recipes-db.js](routes/recipes-db.js)
 - create a database named **recipes**
