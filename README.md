@@ -21,8 +21,8 @@ Node JS CRUD API Example
 ## ⚙ Install
 
 ```sh
-git clone https://github.com/sabovoichita/node-api-recipes2.git
-cd node-api-recipes2
+git clone https://github.com/sabovoichita/node-api-recipes.git
+cd node-api-recipes
 npm install
 ```
 
